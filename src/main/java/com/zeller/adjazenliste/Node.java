@@ -69,9 +69,7 @@ public class Node {
         newnd.add(this);
         
         if(this == gesucht){
-        System.out.println();
-        System.out.println("WEG: ");  
-        
+            
         ArrayList<String> namen = new ArrayList<>();
         
             for(Node nds: newnd){
