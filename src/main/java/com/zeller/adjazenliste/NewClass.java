@@ -31,8 +31,7 @@ public class NewClass {
         Patrick.addVerbinung(Leonie);
         Anne.addVerbinung(Tobi);
         
-        ArrayList<Node> suchl = new ArrayList<>();
-        System.out.println(Michael.shortestway(Tobi, suchl));
+        System.out.println(Michael.shortestway(Tobi));
         
        
 

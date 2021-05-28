@@ -94,7 +94,8 @@ public class Node {
         
         
     }
-    public ArrayList<String> shortestway(Node gesucht, ArrayList<Node> ndlist){
+    public ArrayList<String> shortestway(Node gesucht){
+        ArrayList<Node> ndlist = new ArrayList<>();
         this.suche(gesucht, ndlist);
         
         ArrayList<String> shorArrayList = new ArrayList<>();
