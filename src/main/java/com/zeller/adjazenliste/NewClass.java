@@ -21,6 +21,7 @@ public class NewClass {
         Node Patrick = new Node("Patrick");
         Node Anne = new Node("Anne");
         Node Leonie = new Node("Leonie");
+        Node Tobi = new Node("Tobi");
         
         Michael.addVerbinung(Leonie);
         Michael.addVerbinung(Jonas);
@@ -28,12 +29,12 @@ public class NewClass {
         
         Jonas.addVerbinung(Anne);
         Patrick.addVerbinung(Leonie);
-        
-        
+        Anne.addVerbinung(Tobi);
         
         ArrayList<Node> suchl = new ArrayList<>();
+        System.out.println(Michael.shortestway(Tobi, suchl));
         
-        System.out.println(Michael.such(Leonie, suchl));
+       
 
        
         

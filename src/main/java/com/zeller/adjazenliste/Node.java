@@ -62,10 +62,13 @@ public class Node {
     
     
     public void suche(Node gesucht, ArrayList<Node> ndlist){
+        
         ArrayList<Node> newnd = new ArrayList<>();
         for(Node n : ndlist){
-        newnd.add(n);
+            
+            newnd.add(n);
         }
+        
         newnd.add(this);
         
         if(this == gesucht){
@@ -74,13 +77,12 @@ public class Node {
         
             for(Node nds: newnd){
                 namen.add(nds.getName());
- 
             }
+            
          this.ergebnisse.add(namen);
         }
         
         
-
         for(Node nd: this.getVerbindungen()){
             
             if(!newnd.contains(nd)){
@@ -92,9 +94,25 @@ public class Node {
         
         
     }
-    public ArrayList<ArrayList<String>> such(Node gesucht, ArrayList<Node> ndlist){
+    public ArrayList<String> shortestway(Node gesucht, ArrayList<Node> ndlist){
         this.suche(gesucht, ndlist);
-        return gesucht.ergebnisse;
+        
+        ArrayList<String> shorArrayList = new ArrayList<>();
+        boolean first = true;
+        
+        for(ArrayList<String> stli: gesucht.ergebnisse){
+            if(first){
+                first = false;
+                shorArrayList = stli;
+               
+            }else{
+                if(stli.size()< shorArrayList.size()){
+                    stli = shorArrayList;
+                }
+            }
+        }
+        
+        return shorArrayList;
     }
     
      
